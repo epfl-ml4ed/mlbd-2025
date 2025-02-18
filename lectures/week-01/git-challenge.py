@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import pandas as pd
 
 def person_a():
     """Reads the data in data/school_performance.csv
@@ -9,9 +10,9 @@ def person_a():
     dataframe: containing first 5,000 rows of school_performace.csv
     """
     # Code goes over here.
-
+    df = pd.read_csv("data/school_performance.csv")
     
-    raise NotImplementedError()
+    return df.head(5000)
 
 def person_b(df):
     """Keeps only the data from the female students. 
