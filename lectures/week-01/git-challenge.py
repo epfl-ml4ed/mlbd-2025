@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import pandas as pd
+
 def person_a():
     """Reads the data in data/school_performance.csv
     and returns a dataframe with the first 5,000 rows.
@@ -23,9 +25,9 @@ def person_b(df):
     Returns:
     dataframe: Data from the female students
     """
-    # Code goes over here.
+    data = pd.read_csv("data/school_performance.csv")
 
-    raise NotImplementedError()
+    return data.head(5000)
 
 def person_c(df):
     """Calculates the mean from the column "grade"
