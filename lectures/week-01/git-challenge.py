@@ -12,7 +12,6 @@ def person_a():
     # Code goes over here.
     df = pd.read_csv("data/school_performance.csv")
     
-    
     return df.head(5000)
 
 def person_b(df):
