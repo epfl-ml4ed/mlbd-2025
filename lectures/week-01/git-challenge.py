@@ -38,7 +38,7 @@ def person_c(df):
     """
     # Code goes over here.
 
-    raise NotImplementedError()
+    return df["grade"].mean()
 
 def main():
     """ Main program """
