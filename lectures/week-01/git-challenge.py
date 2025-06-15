@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import pandas as pd
 
 def person_a():
     """Reads the data in data/school_performance.csv
@@ -8,7 +9,8 @@ def person_a():
     Returns:
     dataframe: containing first 5,000 rows of school_performace.csv
     """
-    # Code goes over here.
+    df = pd.read_csv("../../data/school_performance.csv")
+    return df.head(5000) 
 
     
     raise NotImplementedError()
@@ -23,7 +25,8 @@ def person_b(df):
     Returns:
     dataframe: Data from the female students
     """
-    # Code goes over here.
+    df = df[df["gender"] == 'female' ]
+    return df
     raise NotImplementedError()
 
 
@@ -37,7 +40,8 @@ def person_c(df):
     float: Mean grade
     """
     # Code goes over here.
-
+    mean = df["grade"].mean()
+    return mean
     raise NotImplementedError()
 
 def main():
